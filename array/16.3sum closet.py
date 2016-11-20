@@ -25,4 +25,4 @@ nums = [0, 2, 1, -3]
 target = 1
 a = Solution()
 ans = a.threeSumClosest(nums, target)
-print ans
+print ans 
