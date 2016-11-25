@@ -27,7 +27,8 @@ class Solution(object):
 		if i > j:
 			return i
 #复杂度O(log(n))，提高了50%
-
+#神奇的是把len(nums)算好赋值给一个变量，然后用这个变量，以免每次计算len(nums)
+#反而只击败50%的选手
 if __name__ == "__main__":
 	result = Solution().searchInsert([1,3,5,6], 0)
 	print result
