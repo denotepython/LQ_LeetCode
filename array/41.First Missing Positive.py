@@ -35,21 +35,19 @@ class Solution(object):
 # 				nums[i], nums[nums[i]-1] = nums[nums[i]-1], nums[i]
 # 			else:
 class Solution:
-    # @param A, a list of integers
-    # @return an integer
-    def firstMissingPositive(self, A):
+    def firstMissingPositive(self, nums):
         i = 0
-        while i < len(A):
-            if A[i] > 0 and A[i] - 1 < len(A) and A[i] != A[A[i]-1]:
-                print A[i], A[A[i]-1]
-                A[A[i]-1], A[i] = A[i], A[A[i]-1]
+        while i < len(nums):
+            if nums[i] > 0 and nums[i] - 1 < len(nums) and nums[i] != nums[nums[i]-1]:
+                #同一个i可以执行多次调换!!!
+                nums[nums[i]-1], nums[i] = nums[i], nums[nums[i]-1]
             else:
                 i += 1
-        
-        for i, integer in enumerate(A):
+        #使用python的enumerate获取索引和索引内容
+        for i, integer in enumerate(nums):
             if integer != i + 1:
                 return i + 1
-        return len(A) + 1				
+        return len(nums) + 1				
 
 if __name__ == "__main__":
 	result = Solution().firstMissingPositive([3,4,-1,1])
