@@ -20,7 +20,7 @@ class Solution(object):
 		:rtype: int
 		"""
 if __name__ == '__main__':
-    result = Solution().removeDuplicates([1,1,2])
+    result = Solution().removeDuplicates([1,1,2,2,3,4,5,6])
     print result
 
 #懂了，不能开启新的空间，要改变原来的list
