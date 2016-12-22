@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # class Solution(object):
 # 	def generateMatrix(self, n):
 # 		cols, rows = n, n
